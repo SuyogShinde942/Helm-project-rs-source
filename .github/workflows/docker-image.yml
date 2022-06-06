@@ -18,11 +18,6 @@ jobs:
     - name: docker login
       run: | # log into docker hub account
         docker login -u suyog942 -p Suyog942@
-# - name: Login to DockerHub
-#       uses: docker/login-action@v1
-#       with:
-#         username: ${{ secrets.DOCKER_USER }}
-#         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Get current date # get the date of the build
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"
